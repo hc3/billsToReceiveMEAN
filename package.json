@@ -1,0 +1,28 @@
+{
+  "name": "billsToReceiveMEAN",
+  "version": "0.0.1",
+  "description": "uma aplicação para controle de débitos",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hc3/billsToReceiveMEAN.git"
+  },
+  "keywords": [
+    "MEAN",
+    "Javascript",
+    "NodeJS",
+    "AngularJS"
+  ],
+  "author": "hc3",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/hc3/billsToReceiveMEAN/issues"
+  },
+  "dependencies": {
+    "mongoose": "~4.4.12",
+    "body-parser": "~1.15.0"
+  }
+}
