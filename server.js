@@ -32,7 +32,7 @@ mongoose.connect('mongodb://localhost/billToReceive', function(err, res) {
 	}
 });
 
-
+//
 app.get("*",function(req,res) {
   res.sendFile("./public/index.html");
 })

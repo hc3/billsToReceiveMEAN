@@ -2,11 +2,62 @@
 <html lang="pt-br">
 <head>
 <meta charset="utf-8"/>
-
+  <link rel="stylesheet" href="/libs/bootstrap/bootstrap.css">
+  <script src="/libs/angularjs/angular.js"></script>
+  <script src="/libs/angularjs/angular-messages.js"></script>
 <title>HTML5 – Estrutura básica</title>
 </head>
 
-<body>
-  <p>Testando o sendFile</p>
+<body ng-app="">
+  <main class="container">
+    <header class="jumbotron">
+      <h1>Titulo do site</h1>
+    </header>
+    
+    <section class="container" id="main">
+      <section class="row">
+        <div class="col-md-12">
+          <h3>Header h3 da div col-md-12</h3>
+        </div>
+      </section>
+      
+      <section class="row container">
+        <article class="col-md-6">
+          
+          <h4>Header h4 da article col-md-6</h4>
+          
+        </article>
+      </section>
+      
+      <section class="col-md-6">
+        <!-- falta setar um nome para o form -->
+        {{cliente}}
+        <form>
+          <fieldset>
+            <legend>Legenda do form</legend>
+            <div class="form-group">
+              <label class="col-md-4" control-label role="nome">Nome :</label>
+              <div class="col-md-8">
+                <input class="form-control" type="text" placeholder="digite o nome" name="nome" id="nome"
+                ng-minlength="3" ng-required="true" ng-model="cliente.nome">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="col-md-4" control-label role="nome">cpf :</label>
+              <div class="col-md-8">
+                <input class="form-control" type="text" placeholder="digite o cpf" name="cpf" id="cpf"
+                ng-minlength="9" ng-required="true" ng-model="cliente.cpf">
+              </div>
+            </div>
+            
+          </fieldset>
+        </form>
+      </section>
+    </section>
+    
+  </main>
 </body>
+  <script src="/libs/jquery/jquery-2.1.4.min.js"></script>
+  <script src="/libs/bootstrap/bootstrap-min.js"></script>
 </html>
