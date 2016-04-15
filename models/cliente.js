@@ -15,16 +15,17 @@ const _clienteSchema = {
   cpf: {
     type:String
   },
-  endereco:[{
+  endereco:{
     rua:String,
     bairro:String
-  }],
-  contato: [{
+  },
+  contato: {
     celular:String,
     email:String
-  }]
+  }
   
-}
+};
+
 const Cliente = new Schema(_clienteSchema);
 
 module.exports = mongoose.model('Cliente',Cliente);

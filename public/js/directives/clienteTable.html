@@ -1,0 +1,18 @@
+<table class="table table-striped" ng-show="data.length > 0">
+  <thead>
+    <tr>
+      <th></th>
+      <th><a href=""></a>Nome</th>
+      <th><a href=""></a>Cpf</th>
+      <th><a href=""></a>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="cliente in data">
+      <td></td>
+      <td>{{cliente.nome}}</td>
+      <td>{{ cliente.cpf }}</td>
+      <td>{{ cliente.contato.email }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,4 +1,4 @@
-app.controller('clienteController',['$scope','clienteService',function($scope,clienteService) {
+app.controller('clienteController',['$scope','clienteService','clienteAPI',function($scope,clienteService,clienteAPI) {
   
   $scope.header = {
     title:"titulo do site"
@@ -8,7 +8,7 @@ app.controller('clienteController',['$scope','clienteService',function($scope,cl
     cliente:"Cliente",
     movimento:"Movimentação",
     painel:"Gerenciamento"
-  }
+  };
   
   $scope.footer = {
     telefone:"",
@@ -16,15 +16,22 @@ app.controller('clienteController',['$scope','clienteService',function($scope,cl
     iconsFace:"",
     iconsLinkedin:"",
     iconsEmail:""
-  }
+  };
   
   var carregaClientes = function() {
     clienteService.getClientes().success(function(data) {
       $scope.clientes = data;
     }).error(function(err) {
-      $scope.message = "deu merda: "+err
+      $scope.message = "deu merda: "+err;
     });
-  }
+  };
+  
+  $scope.saveCliente = function(cliente) {
+    clienteAPI.saveCliente(cliente).success(function(data){
+      delete $scope.cliente;
+      carregaClientes();
+    });
+  };
   
   carregaClientes();
   

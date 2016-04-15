@@ -45,14 +45,14 @@ module.exports = function(app) {
         var cliente = new Cliente({
       nome : req.body.nome,
       cpf : req.body.cpf,
-      endereco : [{
+      endereco : {
         rua : req.body["endereco.rua"],
         bairro : req.body["endereco.bairro"]
-      }] ,
-      contato : [{
+      } ,
+      contato : {
         celular : req.body["contato.celular"],
         email : req.body["contato.email"]
-      }]
+      }
     });
     cliente.save(function(err) {
       
