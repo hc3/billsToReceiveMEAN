@@ -22,74 +22,81 @@
         </div>
       </section>
       
-      <section class="row container">
-        <article class="col-md-6">
-          
-          <h4>Header h4 da article col-md-6</h4>
-          
-        </article>
-      </section>
-      
-      <section class="col-md-6" id="formCadastro">
-        <!-- falta setar um nome para o form -->
-        {{clientes}}
-        <form>
-          <fieldset>
-            <legend>Legenda do form</legend>
-            <div class="form-group">
-              <label class="col-md-4" control-label role="nome">Nome :</label>
-              <div class="col-md-8">
-                <input class="form-control" type="text" placeholder="digite o nome" name="nome" id="nome"
-                ng-minlength="3" ng-required="true" ng-model="cliente.nome">
-              </div>
-            </div>
+        <section class="row container">
+          <article class="col-md-6">
             
-            <div class="form-group">
-              <label class="col-md-4" control-label role="nome">cpf :</label>
-              <div class="col-md-8">
-                <input class="form-control" type="text" placeholder="digite o cpf" name="cpf" id="cpf"
-                ng-minlength="9" ng-required="true" ng-model="cliente.cpf">
+            <h4>Header h4 da article col-md-6</h4>
+            <!-- TABELA VAI FICAR AQUI -->
+          </article>
+        
+        <section class="col-md-6">
+          <!-- falta setar um nome para o form -->
+          <form>
+            <fieldset>
+              <legend>Legenda do form</legend>
+              <div class="form-group">
+                <label class="col-md-4" control-label role="nome">Nome :</label>
+                <div class="col-md-8">
+                  <input class="form-control" type="text" placeholder="digite o nome" name="nome" id="nome"
+                  ng-minlength="3" ng-required="true" ng-model="cliente.nome">
+                </div>
               </div>
-            </div>
-            
-            <div class="form-group">
-              <label class="col-md-4" control-label role="rua">Rua :</label>
-              <div class="col-md-8">
-                <input class="form-control" type="text" placeholder="digite o rua" name="rua" id="rua"
-                ng-minlength="9" ng-required="true" ng-model="cliente.endereco.rua">
+              
+              <div class="form-group">
+                <label class="col-md-4" control-label role="nome">cpf :</label>
+                <div class="col-md-8">
+                  <input class="form-control" type="text" placeholder="digite o cpf" name="cpf" id="cpf"
+                  ng-minlength="9" ng-required="true" ng-model="cliente.cpf">
+                </div>
               </div>
-            </div>            
-
-            <div class="form-group">
-              <label class="col-md-4" control-label role="bairro">Bairro :</label>
-              <div class="col-md-8">
-                <input class="form-control" type="text" placeholder="digite o bairro" name="bairro" id="bairro"
-                ng-minlength="9" ng-required="true" ng-model="cliente.endereco.bairro">
+              
+              <div class="form-group">
+                <label class="col-md-4" control-label role="rua">Rua :</label>
+                <div class="col-md-8">
+                  <input class="form-control" type="text" placeholder="digite o rua" name="rua" id="rua"
+                  ng-minlength="9" ng-required="true" ng-model="cliente.endereco.rua">
+                </div>
+              </div>            
+  
+              <div class="form-group">
+                <label class="col-md-4" control-label role="bairro">Bairro :</label>
+                <div class="col-md-8">
+                  <input class="form-control" type="text" placeholder="digite o bairro" name="bairro" id="bairro"
+                  ng-minlength="9" ng-required="true" ng-model="cliente.endereco.bairro">
+                </div>
               </div>
-            </div>
-
-            <div class="form-group">
-              <label class="col-md-4" control-label role="contato">Contato :</label>
-              <div class="col-md-8">
-                <input class="form-control" type="text" placeholder="digite o celular" name="celular" id="celular"
-                ng-minlength="9" ng-required="true" ng-model="cliente.contato.celular">
+  
+              <div class="form-group">
+                <label class="col-md-4" control-label role="contato">Contato :</label>
+                <div class="col-md-8">
+                  <input class="form-control" type="text" placeholder="digite o celular" name="celular" id="celular"
+                  ng-minlength="9" ng-required="true" ng-model="cliente.contato.celular">
+                </div>
+              </div>            
+  
+              <div class="form-group">
+                <label class="col-md-4" control-label role="email">Email :</label>
+                <div class="col-md-8">
+                  <input class="form-control" type="text" placeholder="digite o email" name="email" id="email"
+                  ng-minlength="9" ng-required="true" ng-model="cliente.contato.cpf">
+                </div>
               </div>
-            </div>            
-
-            <div class="form-group">
-              <label class="col-md-4" control-label role="email">Email :</label>
-              <div class="col-md-8">
-                <input class="form-control" type="text" placeholder="digite o email" name="email" id="email"
-                ng-minlength="9" ng-required="true" ng-model="cliente.contato.cpf">
+              <div class="form-group">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                  <button class="btn btn-primary btn-block" ng-click="addCliente(cliente)">Cadastrar</button>
+                  <button class="btn btn-danger btn-block" ng-click="removeCliente(cliente)">Remover</button>
+                </div>
               </div>
-            </div>            
-          </fieldset>
-        </form>
-      </section>
-      
+            </fieldset>
+          </form>
+           {{clientes}}
+        </section>
+      </section>      
     </section>
     
   </main>
+ 
 </body>
   <script src="/js/app.js"></script>
   <script src="/js/services/clienteService.js"></script>
