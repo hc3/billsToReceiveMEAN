@@ -9,8 +9,8 @@
 <title>Controle Financeiro</title>
 </head>
 
-<body ng-app="">
-  <main class="container">
+<body ng-app="appController">
+  <main class="container" ng-controller="clienteController">
     <header class="jumbotron">
       <h1>Controle financeiro</h1>
     </header>
@@ -32,7 +32,7 @@
       
       <section class="col-md-6" id="formCadastro">
         <!-- falta setar um nome para o form -->
-        {{cliente}}
+        {{clientes}}
         <form>
           <fieldset>
             <legend>Legenda do form</legend>
@@ -86,10 +86,14 @@
           </fieldset>
         </form>
       </section>
+      
     </section>
     
   </main>
 </body>
+  <script src="/js/app.js"></script>
+  <script src="/js/services/clienteService.js"></script>
+  <script src="/js/controllers/clienteController.js"></script>
   <script src="/libs/jquery/jquery-2.1.4.min.js"></script>
   <script src="/libs/bootstrap/bootstrap-min.js"></script>
 </html>

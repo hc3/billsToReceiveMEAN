@@ -1,0 +1,9 @@
+
+
+form{
+  margin-top:40px;
+}
+
+input[type="text"], input[type="date"], input[type="submit"], input[type="number"], select, button, label{
+  margin-top:10px;
+}
