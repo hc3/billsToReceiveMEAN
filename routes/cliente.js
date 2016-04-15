@@ -44,7 +44,15 @@ module.exports = function(app) {
     console.log('POST - /cliente');
     var cliente = new Cliente({
       nome : req.body.nome,
-      cpf : req.body.cpf
+      cpf : req.body.cpf,
+      endereco :{
+        rua : req.body.endereco.rua,
+        bairro : req.body.endereco.bairro
+      } ,
+      contato : {
+        celular : req.body.contato.celular,
+        email : req.body.contato.email
+      }
     });
     cliente.save(function(err) {
       
@@ -68,7 +76,11 @@ module.exports = function(app) {
       }
       if(req.body.nome != null) cliente.nome = req.body.nome;
       if(req.body.cpf != null) cliente.cpf = req.body.cpf;
-      
+      if(req.body.endereco.rua != null) cliente.endereco.rua = req.body.endereco.rua;
+      if(req.body.endereco.bairro != null) cliente.endereco.bairro = req.body.endereco.bairro;
+      if(req.body.contato.celular != null) cliente.contato.celular = req.body.contato.celular;
+      if(req.body.contato.email != null) cliente.contato.email = req.body.contato.email;
+   
       return cliente.save(function(err) {
         if(!err) {
           console.log("cliente atualizado");
