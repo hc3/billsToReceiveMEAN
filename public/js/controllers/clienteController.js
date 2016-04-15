@@ -26,7 +26,6 @@ app.controller('clienteController',['$scope','clienteService',function($scope,cl
     });
   }
   
-  
   carregaClientes();
   
 }])
