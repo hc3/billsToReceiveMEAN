@@ -16,12 +16,12 @@ const _clienteSchema = {
     type:String
   },
   endereco:{
-    rua:String,
-    bairro:String
+    rua:{type:String},
+    bairro:{type:String}
   },
-  contato: {
-    celular:String,
-    email:String
+  contato : {
+    celular:{type:String},
+    email:{type:String}
   }
   
 };

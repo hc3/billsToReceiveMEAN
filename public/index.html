@@ -25,15 +25,16 @@
         <section class="row container">
           <article class="col-md-6">
             
-            <h4>Header h4 da article col-md-6</h4>
+            <h4>{{ formCliente.title }}</h4>
             <cliente-table data="clientes"></cliente-table>
           </article>
         
         <section class="col-md-6">
           <!-- falta setar um nome para o form -->
+          {{cliente}}
           <form>
             <fieldset>
-              <legend>Legenda do form</legend>
+              <legend>Cadastrar novo Cliente</legend>
               <div class="form-group">
                 <label class="col-md-4" control-label role="nome">Nome :</label>
                 <div class="col-md-8">
@@ -43,7 +44,7 @@
               </div>
               
               <div class="form-group">
-                <label class="col-md-4" control-label role="nome">cpf :</label>
+                <label class="col-md-4" control-label role="cpf">cpf :</label>
                 <div class="col-md-8">
                   <input class="form-control" type="text" placeholder="digite o cpf" name="cpf" id="cpf"
                   ng-minlength="2" ng-required="true" ng-model="cliente.cpf">
@@ -78,7 +79,7 @@
                 <label class="col-md-4" control-label role="email">Email :</label>
                 <div class="col-md-8">
                   <input class="form-control" type="text" placeholder="digite o email" name="email" id="email"
-                  ng-minlength="2" ng-required="true" ng-model="cliente.contato.cpf">
+                  ng-minlength="2" ng-required="true" ng-model="cliente.contato.email">
                 </div>
               </div>
               <div class="form-group">

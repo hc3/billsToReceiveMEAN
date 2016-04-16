@@ -42,18 +42,21 @@ module.exports = function(app) {
   
   addCliente = function(req,res) {
     console.log('POST - /cliente');
-        var cliente = new Cliente({
-      nome : req.body.nome,
-      cpf : req.body.cpf,
-      endereco : {
-        rua : req.body["endereco.rua"],
-        bairro : req.body["endereco.bairro"]
-      } ,
-      contato : {
-        celular : req.body["contato.celular"],
-        email : req.body["contato.email"]
-      }
+      var cliente = new Cliente({
+        nome : req.body.nome,
+        cpf : req.body.cpf,
+        endereco : {
+          rua : req.body.rua,
+          bairro : req.body.bairro
+        } ,
+        contato : {
+          celular : req.body.celular,
+          email : req.body.email
+        }
     });
+    console.log("mondel instanciado!"+cliente);
+    console.log("cliente objeto:  "+cliente.endereco.rua);
+    console.log("req parte rua: "+req.body.rua);
     cliente.save(function(err) {
       
       if(err) {
@@ -61,6 +64,7 @@ module.exports = function(app) {
         res.send({error:err});
       } else {
         console.log('cliente criado com sucesso!');
+        
         res.send({status:'OK',cliente:cliente});
       }
       

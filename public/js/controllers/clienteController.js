@@ -10,6 +10,10 @@ app.controller('clienteController',['$scope','clienteService','clienteAPI',funct
     painel:"Gerenciamento"
   };
   
+  $scope.formCliente = {
+    title:"Cadastro de Cientes"
+  }
+  
   $scope.footer = {
     telefone:"",
     email:"",
@@ -35,4 +39,4 @@ app.controller('clienteController',['$scope','clienteService','clienteAPI',funct
   
   carregaClientes();
   
-}])
+}]);
