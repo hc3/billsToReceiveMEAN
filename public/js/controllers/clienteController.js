@@ -11,8 +11,8 @@ app.controller('clienteController',['$scope','clienteService','clienteAPI',funct
   };
   
   $scope.formCliente = {
-    title:"Cadastro de Cientes"
-  }
+    title:"Listagem de Cientes"
+  };
   
   $scope.footer = {
     telefone:"",
