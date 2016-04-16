@@ -42,21 +42,7 @@ module.exports = function(app) {
   
   addCliente = function(req,res) {
     console.log('POST - /cliente');
-      var cliente = new Cliente({
-        nome : req.body.nome,
-        cpf : req.body.cpf,
-        endereco : {
-          rua : req.body.rua,
-          bairro : req.body.bairro
-        } ,
-        contato : {
-          celular : req.body.celular,
-          email : req.body.email
-        }
-    });
-    console.log("mondel instanciado!"+cliente);
-    console.log("cliente objeto:  "+cliente.endereco.rua);
-    console.log("req parte rua: "+req.body.rua);
+      var cliente = new Cliente(req.body);
     cliente.save(function(err) {
       
       if(err) {
