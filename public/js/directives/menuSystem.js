@@ -1,6 +1,6 @@
 app.directive('menuSystem',function() {
   function _link(data,element,attrs) {
-      
+    
   }
   return {
     restrict:'E',

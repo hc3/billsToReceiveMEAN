@@ -1,62 +1,62 @@
-        <section class="col-md-6">
-          <!-- falta setar um nome para o form -->
-          <form>
-            <fieldset>
-              <legend>Cadastrar novo Cliente</legend>
-              <div class="form-group">
-                <label class="col-md-4" control-label role="nome">Nome :</label>
-                <div class="col-md-8">
-                  <input class="form-control" type="text" placeholder="digite o nome" name="nome" id="nome"
-                  ng-minlength="3" ng-required="true" ng-model="cliente.nome">
-                </div>
-              </div>
-              
-              <div class="form-group">
-                <label class="col-md-4" control-label role="cpf">cpf :</label>
-                <div class="col-md-8">
-                  <input class="form-control" type="text" placeholder="digite o cpf" name="cpf" id="cpf"
-                  ng-minlength="2" ng-required="true" ng-model="cliente.cpf">
-                </div>
-              </div>
-              
-              <div class="form-group">
-                <label class="col-md-4" control-label role="rua">Rua :</label>
-                <div class="col-md-8">
-                  <input class="form-control" type="text" placeholder="digite o rua" name="rua" id="rua"
-                  ng-minlength="2" ng-required="true" ng-model="cliente.endereco.rua">
-                </div>
-              </div>            
-  
-              <div class="form-group">
-                <label class="col-md-4" control-label role="bairro">Bairro :</label>
-                <div class="col-md-8">
-                  <input class="form-control" type="text" placeholder="digite o bairro" name="bairro" id="bairro"
-                  ng-minlength="2" ng-required="true" ng-model="cliente.endereco.bairro">
-                </div>
-              </div>
-  
-              <div class="form-group">
-                <label class="col-md-4" control-label role="contato">Contato :</label>
-                <div class="col-md-8">
-                  <input class="form-control" type="text" placeholder="digite o celular" name="celular" id="celular"
-                  ng-minlength="2" ng-required="true" ng-model="cliente.contato.celular">
-                </div>
-              </div>            
-  
-              <div class="form-group">
-                <label class="col-md-4" control-label role="email">Email :</label>
-                <div class="col-md-8">
-                  <input class="form-control" type="text" placeholder="digite o email" name="email" id="email"
-                  ng-minlength="2" ng-required="true" ng-model="cliente.contato.email">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-md-4"></div>
-                <div class="col-md-8">
-                  <button class="btn btn-primary btn-block" ng-click="saveCliente(cliente)">Cadastrar</button>
-                  <button class="btn btn-danger btn-block" ng-click="deleteCliente(cliente)">Remover</button>
-                </div>
-              </div>
-            </fieldset>
-          </form>
-        </section>
+<section class="col-md-6">
+  <!-- falta setar um nome para o form -->
+  <form>
+    <fieldset>
+      <legend>Cadastrar novo Cliente</legend>
+      <div class="form-group">
+        <label class="col-md-4" control-label role="nome">Nome :</label>
+        <div class="col-md-8">
+          <input class="form-control" type="text" placeholder="digite o nome" name="nome" id="nome"
+          ng-minlength="3" ng-required="true" ng-model="cliente.nome">
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="col-md-4" control-label role="cpf">cpf :</label>
+        <div class="col-md-8">
+          <input class="form-control" type="text" placeholder="digite o cpf" name="cpf" id="cpf"
+          ng-minlength="2" ng-required="true" ng-model="cliente.cpf">
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="col-md-4" control-label role="rua">Rua :</label>
+        <div class="col-md-8">
+          <input class="form-control" type="text" placeholder="digite o rua" name="rua" id="rua"
+          ng-minlength="2" ng-required="true" ng-model="cliente.endereco.rua">
+        </div>
+      </div>            
+
+      <div class="form-group">
+        <label class="col-md-4" control-label role="bairro">Bairro :</label>
+        <div class="col-md-8">
+          <input class="form-control" type="text" placeholder="digite o bairro" name="bairro" id="bairro"
+          ng-minlength="2" ng-required="true" ng-model="cliente.endereco.bairro">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-4" control-label role="contato">Contato :</label>
+        <div class="col-md-8">
+          <input class="form-control" type="text" placeholder="digite o celular" name="celular" id="celular"
+          ng-minlength="2" ng-required="true" ng-model="cliente.contato.celular">
+        </div>
+      </div>            
+
+      <div class="form-group">
+        <label class="col-md-4" control-label role="email">Email :</label>
+        <div class="col-md-8">
+          <input class="form-control" type="text" placeholder="digite o email" name="email" id="email"
+          ng-minlength="2" ng-required="true" ng-model="cliente.contato.email">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+          <button class="btn btn-primary btn-block" ng-click="saveCliente(cliente)">Cadastrar</button>
+          <button class="btn btn-danger btn-block" ng-click="deleteCliente(cliente)">Remover</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</section>
