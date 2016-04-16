@@ -42,7 +42,7 @@ module.exports = function(app) {
   
   addCliente = function(req,res) {
     console.log('POST - /cliente');
-      var cliente = new Cliente(req.body);
+    var cliente = new Cliente(req.body);
     cliente.save(function(err) {
       
       if(err) {
