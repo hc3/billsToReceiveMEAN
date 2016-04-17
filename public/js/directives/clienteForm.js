@@ -1,6 +1,6 @@
 app.directive('clienteForm',function() {
   return {
     restrict:'E',
-    templateUrl:'js/partials/clienteForm.html'
+    templateUrl:'js/views/partials/clienteForm.html'
   };
 });

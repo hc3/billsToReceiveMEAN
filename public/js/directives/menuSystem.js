@@ -4,7 +4,7 @@ app.directive('menuSystem',function() {
   }
   return {
     restrict:'E',
-    templateUrl:'js/partials/menuSystem.html',
+    templateUrl:'js/views/partials/menuSystem.html',
     link: _link
   };
 });

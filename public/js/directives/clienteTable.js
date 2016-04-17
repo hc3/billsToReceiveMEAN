@@ -5,7 +5,7 @@ app.directive('clienteTable',function() {
     scope:{
       data : '='
     },
-    templateUrl: 'js/partials/clienteTable.html'
+    templateUrl: 'js/views/partials/clienteTable.html'
   };
   
 });

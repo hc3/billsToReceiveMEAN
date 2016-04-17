@@ -1,0 +1,25 @@
+<section class="col-md-6">
+  <!-- falta setar um nome para o form -->
+  <form>
+    {{ servico }}
+    <fieldset>
+      <legend>Cadastrar novo Servico</legend>
+      <div class="form-group">
+        <label class="col-md-2" control-label role="nome">Descrição</label>
+        <div class="col-md-8">
+          <input class="form-control" type="text" placeholder="digite a descrição" name="descricao" id="descricao"
+          ng-minlength="3" ng-required="true" ng-model="servico.descricao">
+        </div>
+      </div>
+    
+      
+      <div class="form-group">
+        <label class="col-md-3" control-label role="valor">valor</label>
+        <div class="col-md-6" id="inputValor">
+          <input class="form-control" type="number" placeholder="digite o valor" name="valor" id="valor"
+          ng-required="true" ng-model="servico.valor">
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</section>

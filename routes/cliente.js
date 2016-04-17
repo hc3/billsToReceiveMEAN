@@ -112,10 +112,9 @@ module.exports = function(app) {
   };
   
   
-  
   app.get('/cliente',findAllClientes);
   app.get('/cliente/:id',findById);
   app.post('/cliente',addCliente);
   app.put('/cliente/:id',updateCliente);
   app.delete('/cliente/:id',deleteCliente);
-}
+};
