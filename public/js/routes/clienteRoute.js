@@ -1,11 +1,10 @@
-app.config(['ngRoute',function($routeProvider,$locationProvider) {
+app.config(function($routeProvider) {
     
-    $locationProvider.html5Mode(true);
     
     $routeProvider
     
-    .when('/clientes',{
-      templateUrl:'views/partials/bodyCliente.html',
+    .when('/cliente',{
+      templateUrl:'js/views/partials/bodyCliente.html',
       controller:'clienteController'
     });
-}]);
+});

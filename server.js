@@ -32,14 +32,7 @@ mongoose.connect('mongodb://localhost/billToReceive', function(err, res) {
 	}
 });
 
-//
-app.get("*",function(req,res) {
-  res.sendFile("./public/index.html");
-});
-
-app.get("/clientes",function(req,res) {
-  res.sendFile("./public/index.html");
-});
+  
 
 // listen (start app with node server.js) ===================================================================
 app.listen(port);

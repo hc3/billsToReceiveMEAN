@@ -18,7 +18,7 @@ module.exports = function(app) {
         console.log('erro interno:',res.statusCode,err.message);
         return res.send({error:'Erro no arquivo /routes/cliente.js'});
       }
-    })
+    });
   };
   
   findById = function(req,res) {
@@ -37,7 +37,7 @@ module.exports = function(app) {
         console.log('Erro interno :',res.statusCode,err.message);
         return res.send({error:'Erro no arquivo /routes/cliente.js'});
       }
-    })
+    });
   };
   
   addCliente = function(req,res) {
@@ -112,9 +112,9 @@ module.exports = function(app) {
   };
   
   
-  app.get('/cliente',findAllClientes);
-  app.get('/cliente/:id',findById);
-  app.post('/cliente',addCliente);
-  app.put('/cliente/:id',updateCliente);
-  app.delete('/cliente/:id',deleteCliente);
+  app.get('/api/cliente',findAllClientes);
+  app.get('/api/cliente/:id',findById);
+  app.post('/api/cliente',addCliente);
+  app.put('/api/cliente/:id',updateCliente);
+  app.delete('/api/cliente/:id',deleteCliente);
 };

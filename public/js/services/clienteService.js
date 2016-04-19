@@ -1,7 +1,5 @@
 app.service('clienteService',['$http',function($http) {
     this.getClientes = function() {
-      return $http.get('/cliente');
-    }
-    
-  
+      return $http.get('/api/cliente');
+    };
 }]);
