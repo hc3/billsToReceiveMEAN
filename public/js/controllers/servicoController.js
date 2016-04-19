@@ -2,14 +2,24 @@ app.controller('servicoController',['$scope','servicoService','servicoAPI',funct
   
   $scope.formServico = {
     title:'Listagem de Servicos'
+    
   };
   
   var carregaServicos = function() {
-    servicoService.getServicos().success(function(dat){
+    servicoService.getServicos().success(function(data){
       $scope.servicos = data;
     }).error(function(err){
       $scope.message = "deu merda "+err;
     });
   };
   
-}])
+  $scope.saveServico = function(servico) {
+    servicoAPI.saveServico(servico).success(function(data) {
+      delete $scope.servico;
+      carregaServicos();
+    });
+  };
+  
+  carregaServicos();
+  
+}]);

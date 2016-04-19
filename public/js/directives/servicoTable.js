@@ -4,6 +4,7 @@ app.directive('servicoTable',function() {
     scope:{
       data:'='
     },
-    templateUrl: 'js/views/partials/servicoTable.html'
+    templateUrl: 'js/views/partials/servicoTable.html',
+    controller:'servicoController'
   };
 });

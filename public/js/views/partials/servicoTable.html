@@ -1,4 +1,4 @@
-<table class="table table-striped">
+<table class="table table-striped" ng-show="data.length > 0">
   <thead>
     <tr>
       <th></th>
@@ -7,10 +7,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr ng-repeat="servico in data">
       <td></td>
-      <td>exemplo1</td>
-      <td>20.00</td>
+      <td>{{ servico.descricao }}</td>
+      <td>{{ servico.valor }}</td>
     </tr>
   </tbody>
 </table>

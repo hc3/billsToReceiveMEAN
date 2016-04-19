@@ -8,38 +8,47 @@
 </head>
 
 <body ng-app="appController">
-  <main class="container" ng-controller="clienteController">
+  <main class="container">
+   
     <header class="jumbotron">
-      <h1>Controle financeiro</h1>
+    <h1>Controle financeiro</h1>
     </header>
-    
-      <!-- DIRETIVA DE MENU -->  
+  
+  <!-- DIRETIVA DE MENU -->  
     <section class="row">
+    
+      <menu-system></menu-system>
       
-     <menu-system></menu-system>
-        
       <!-- FIM DA DIRETIVA DE MENU -->
-     
-    <ng-view></ng-view>
       
+      <ng-view></ng-view>
+    
     </section>
-    
-    
+  
+  
   </main>
- 
+
 </body>
   <script src="/libs/angularjs/angular.js"></script>
   <script src="/libs/angularjs/angular-messages.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
   <script src="/js/app.js"></script>
   <script src="/js/routes/clienteRoute.js"></script>
+  <!-- DIRECTIVIES -->
   <script src="/js/directives/clienteTable.js"></script>
+  <script src="/js/directives/servicoTable.js"></script>
   <script src="/js/directives/servicoForm.js"></script>
   <script src="/js/directives/menuSystem.js"></script>
   <script src="/js/directives/clienteForm.js"></script>
+  <!-- SERVICES -->
   <script src="/js/services/clienteAPI.js"></script>
   <script src="/js/services/clienteService.js"></script>
+  <script src="/js/services/servicoAPI.js"></script>
+  <script src="/js/services/servicoService.js"></script>
+  <!-- CONTROLLERS -->
   <script src="/js/controllers/clienteController.js"></script>
+  <script src="/js/controllers/servicoController.js"></script>
+  <!-- LIBS -->
   <script src="/libs/jquery/jquery-2.1.4.min.js"></script>
   <script src="/libs/bootstrap/bootstrap-min.js"></script>
 </html>
