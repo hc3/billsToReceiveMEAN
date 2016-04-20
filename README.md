@@ -7,13 +7,13 @@ no curso da Webschool.io.
 -para iniciar o projeto
 <ol>
   <li>
-  git clone https://github.com/hc3/billsToReceiveMEAN.git
+  <code>git clone https://github.com/hc3/billsToReceiveMEAN.git</code>
   </li>
   <li>
-  entra no projeto e da um npm init 
+  entra no projeto e da um <code>npm install</code> 
   </li>
   <li>
-  depois node server.js
+  depois <code>node server.js</code>
   </li>
 <ol>
 espero que ajude, segue links:
