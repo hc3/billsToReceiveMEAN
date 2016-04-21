@@ -1,6 +1,6 @@
 <section class="col-md-6">
   <!-- falta setar um nome para o form -->
-  <form>
+  <form name="clienteForm" >
     <fieldset>
       <legend>Cadastrar novo Cliente</legend>
       <div class="form-group">
@@ -36,10 +36,10 @@
       </div>
 
       <div class="form-group">
-        <label class="col-md-4" control-label role="contato">Contato :</label>
+        <label class="col-md-4" control-label role="celular">Celular :</label>
         <div class="col-md-8">
           <input class="form-control" type="text" placeholder="digite o celular" name="celular" id="celular"
-          ng-minlength="2" ng-required="true" ng-model="cliente.contato.celular">
+          ng-minlength="2" ng-required="true" ng-model="cliente.contato.celular"  ng-pattern="/^\d{4,5}-\d{4}$/">
         </div>
       </div>            
 
@@ -47,16 +47,20 @@
         <label class="col-md-4" control-label role="email">Email :</label>
         <div class="col-md-8">
           <input class="form-control" type="text" placeholder="digite o email" name="email" id="email"
-          ng-minlength="2" ng-required="true" ng-model="cliente.contato.email">
+          ng-minlength="9" ng-required="true" ng-model="cliente.contato.email">
         </div>
       </div>
       <div class="form-group">
         <div class="col-md-4"></div>
         <div class="col-md-8">
-          <button class="btn btn-primary btn-block" ng-click="saveCliente(cliente)">Cadastrar</button>
+          <button class="btn btn-primary btn-block" ng-click="saveCliente(cliente)" ng-disabled="clienteForm.$invalid">Cadastrar</button>
           <button class="btn btn-danger btn-block" ng-click="deleteCliente(cliente)">Remover</button>
         </div>
       </div>
     </fieldset>
   </form>
+  </br>
+  <div class="alert alert-danger" ng-show="clienteForm.$invalid">
+    Favor inserir todos os dados do cliente seguindo os padrões sugeridos
+  </div>
 </section>

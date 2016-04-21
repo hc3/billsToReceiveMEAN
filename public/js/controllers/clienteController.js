@@ -37,6 +37,10 @@ app.controller('clienteController',['$scope','clienteService','clienteAPI',funct
     });
   };
   
+  $scope.ordenarPor = function(campo) {
+    
+  };
+  
   carregaClientes();
   
 }]);
