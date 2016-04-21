@@ -101,7 +101,7 @@ module.exports = function(app) {
       return cliente.remove(function(err){
         if(!err) {
           console.log("Cliente removido com sucesso!");
-          return res.send({status:"OK"});
+          return res.send({status:"OK",cliente:cliente});
         } else {
           res.statusCode = 500;
           console.log("erro ",res.statusCode,err.message);

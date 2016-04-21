@@ -37,8 +37,10 @@ app.controller('clienteController',['$scope','clienteService','clienteAPI',funct
     });
   };
   
-  $scope.ordenarPor = function(campo) {
-    
+  $scope.removeCliente = function(cliente) {
+    clienteAPI.deleteCliente(cliente).success(function(data){
+      carregaClientes();
+    });
   };
   
   carregaClientes();
